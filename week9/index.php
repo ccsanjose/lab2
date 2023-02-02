@@ -180,6 +180,7 @@ a:active {
   <button class="tablinks" onclick="openCity(event, 'Why')">Why this course?</button>
   <button class="tablinks" onclick="openCity(event, 'Hobbies')">Hobbies</button>
   <button class="tablinks" onclick="openCity(event, 'Resources')">Resources</button>
+  <button class="tablinks" onclick="openCity(event, 'PHP')">PHP</button>
 </div>
 
 <div id="Name" class="tabcontent">
@@ -218,27 +219,8 @@ related to it. I also believe IT will be the future for careers that's why I'm p
 
 
 </div>
-
-<script>
-  /*loop content*/
- /*iterables content*/
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-
-
-<?php
+<div id="PHP" class="tabcontent">
+  <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $name = $email = $gender = $comment = $website = "";
@@ -295,9 +277,9 @@ function test_input($data) {
 }
 ?>
 
-<p>PHP Form Validation Example</p>
-<p><span class="error">* required field</span></p>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  <p><span class="error">* required field</span><br><br>
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
@@ -315,11 +297,13 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <input type="submit" name="submit" value="Submit"> 
+</p>  
 </form>
 
 <?php
-echo "<p>Your Input:</p>";
+
+echo "<p>Your Input:<br><br>";
 echo $name;
 echo "<br>";
 echo $email;
@@ -329,7 +313,30 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $gender;
+
 ?>
+</div>
+
+<script>
+  /*loop content*/
+ /*iterables content*/
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
 
 <p id="demo">Date & time</p>
 
