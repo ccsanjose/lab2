@@ -218,6 +218,25 @@ related to it. I also believe IT will be the future for careers that's why I'm p
 
 
 </div>
+ 
+ <script>
+  /*loop content*/
+ /*iterables content*/
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+ 
 <div id="PHP" class="tabcontent">
   <?php
 // define variables and set to empty values
@@ -343,27 +362,6 @@ $conn->close();
 ?>
 </div>
 
-
-
-
-
-<script>
-  /*loop content*/
- /*iterables content*/
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
  
 <p id="demo">Date & time</p>
 
