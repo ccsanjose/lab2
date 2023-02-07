@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -372,5 +371,3 @@ document.getElementById("demo").innerHTML = d;
 </script>
 </body>
 </html>
-
-
