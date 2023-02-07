@@ -4,7 +4,7 @@
 <head>
  <link rel="icon" type="x-icon" href="rick.JPG">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> PHP Test x MI211</title>
+<title> Francis x MI211</title>
  
 <style>
   .error {color: #FF0000;}
