@@ -339,7 +339,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
- }
+ 
 $conn->close();
 ?>
 </div>
@@ -359,7 +359,7 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-
+}
 </script>
 
 
