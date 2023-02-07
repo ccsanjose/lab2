@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
  <link rel="icon" type="x-icon" href="rick.JPG">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Francis x MI211</title>
+<title> PHP Test x MI211</title>
  
 <style>
   .error {color: #FF0000;}
@@ -218,25 +219,6 @@ related to it. I also believe IT will be the future for careers that's why I'm p
 
 
 </div>
- 
- <script>
-  /*loop content*/
- /*iterables content*/
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
- 
 <div id="PHP" class="tabcontent">
   <?php
 // define variables and set to empty values
@@ -333,34 +315,29 @@ echo "<br>";
 echo $gender;
 
 ?>
- 
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mydbsj";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('Juan', 'Dela Cruz', 'delacruz@gmail.com')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-?>
 </div>
 
- 
+<script>
+  /*loop content*/
+ /*iterables content*/
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+
 <p id="demo">Date & time</p>
 
 <script>
@@ -369,3 +346,5 @@ document.getElementById("demo").innerHTML = d;
 </script>
 </body>
 </html>
+
+
