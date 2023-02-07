@@ -318,7 +318,7 @@ echo $gender;
 
  <?php
  if ($_SERVER["REQUEST_METHOD"] == "POST")
- {
+ 
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -359,7 +359,7 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-}
+
 </script>
 
 
